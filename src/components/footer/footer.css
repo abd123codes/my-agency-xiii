@@ -1,0 +1,119 @@
+.footer {
+  font-size: 10.4166vw;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4.655em;
+}
+@media (max-width: 420px) {
+  .footer {
+    font-size: 2.7rem;
+  }
+}
+.footer .fin-tech {
+  position: absolute;
+  right: -19.505em;
+  top: 0;
+  font-size: 10.4166vw;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 1em;
+  color: transparent;
+  -webkit-text-stroke: 1px #015450;
+  width: 30.615em;
+}
+@media (max-width: 420px) {
+  .footer .fin-tech {
+    font-size: 3rem;
+  }
+}
+.footer .container {
+  font-size: 4.6875vw;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  background-image: url("../../assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  height: 8.8889em;
+}
+@media (max-width: 420px) {
+  .footer .container {
+    font-size: 1.2rem;
+  }
+}
+.footer .container .info {
+  font-size: 4.6875vw;
+  width: 6em;
+  margin-top: 1.667em;
+  margin-left: 2.222em;
+}
+@media (max-width: 420px) {
+  .footer .container .info {
+    font-size: 1.1rem;
+  }
+}
+.footer .container .info .title {
+  font-size: 4.6875vw;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 1.21em;
+  color: #FFFFFF;
+  width: 4.7em;
+  height: 1.21em;
+}
+@media (max-width: 420px) {
+  .footer .container .info .title {
+    font-size: 2rem;
+  }
+}
+.footer .container .info .desc {
+  font-size: 1.3vw;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 0.78125em;
+  color: #FFFFFF;
+  margin-top: 2.24em;
+  width: 21.48em;
+}
+.footer .container .info .desc :nth-child(2) {
+  margin-top: 0.65em;
+}
+@media (max-width: 420px) {
+  .footer .container .info .desc {
+    font-size: 0.8rem;
+  }
+}
+.footer .container .info .socials {
+  font-size: 1.3vw;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: space-between;
+}
+.footer .container .info .socials div {
+  font-size: 1.3vw;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FFFFFF;
+  width: 5.15em;
+  cursor: pointer;
+}
+@media (max-width: 420px) {
+  .footer .container .info .socials div {
+    font-size: 0.4rem;
+  }
+}/*# sourceMappingURL=footer.css.map */
