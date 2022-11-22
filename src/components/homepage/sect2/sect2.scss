@@ -1,6 +1,10 @@
 .sect2{
     font-family: 'Inter', sans-serif;
     font-style: normal;
+    background-image: url('../../../assets/images/background.png');
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
     .row1{
         font-size: 7.8vw;
         display: flex;
@@ -9,11 +13,11 @@
         justify-content: center;
         gap: 1.006em;
         margin: 0 auto;
-        margin-top: 1.33em;
+        padding-top: 1.33em;
         width: 10.1333em;
         color: #202020;
         @media (max-width: 600px){
-            font-size: 2rem;
+            font-size: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -143,31 +147,41 @@
             font-size: 3rem;
         }
         .fin-tech1{
+            display: flex;
+            flex-direction: row;
+            gap: 5.5em;
             color: transparent;
             -webkit-text-stroke: 1px #015450;
             animation-name: slide-in;
-            animation-duration: 28s;
+            animation-duration: 55s;
             animation-iteration-count: infinite;
+            animation-timing-function: linear;
             @keyframes slide-in{
                 0%{
-                    transform: translateX(100%);
+                    transform: translateX(5em);
                 }
                 100% {
-                    transform: translateX(-250%);
+                    transform: translateX(-65em);
                 }
             }
         }
         .fin-tech2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5.5em;
             color: black;
             animation-name: slide-in2;
-            animation-duration: 28s;
+            animation-duration: 55s;
             animation-iteration-count: infinite;
+            animation-timing-function: linear;
             @keyframes slide-in2 {
                 0% {
-                    transform: translateX(-200%);
+                    transform: translateX(-35em);
                 }
                 100% {
-                    transform: translateX(100%);
+                    transform: translateX(35em);
                 }
             }
         }
@@ -178,10 +192,11 @@
         overflow: hidden;
         padding-left: 1em;
         padding-right: 1em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.69em;
         gap: 1em;
         @media (max-width: 600px) {
                 font-size: 1rem;
+            margin-bottom: 3em;
             }
         div{
             cursor: grab;
@@ -256,25 +271,36 @@
         
     }
     .see_more_work{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
         margin: 0 auto;
-        width: 39.5em;
-        margin-bottom:5em;
+        width: 10em;
+        height: 2.333em;
+        margin-bottom:6.366em;
         font-family: 'Sk-Modernist';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 2.0833vw;
         letter-spacing: 0.05em;
         color: #080A16;
-        .text{
-            text-decoration-line: underline;
-        }
-        #right-arrow{
-            text-decoration-line: none;
+        border-radius: 4.33em;
+        :hover{
+            background-color: grey;
+            color: white;
         }
         @media (max-width: 600px) {
-            font-size: 0.8rem;
-            margin-left: 4em;
+            font-size: 0.7rem;
+            margin-bottom: 5em;
         }
+        
+    }
+    .see_more_work:hover {
+        background-color: grey;
+        color: white;
+        border: 0px;
+        cursor: pointer;
     }
     .row4{
         font-size: 10.4167vw;
@@ -288,12 +314,13 @@
         align-items: left;
         justify-content: center;
         gap: 0.171875em;
+        border-radius: 0.5em;
+        box-shadow: 3px 3px 0px 1px gray;
         @media (max-width: 600px) {
                 align-items: center;
                 font-size: 2.5rem;
                 width: 6em;
-                min-height: 4.5em;
-                gap: 0;
+                height: 4em;
             }
         .quotation{
             width: 0.45em;
@@ -306,8 +333,7 @@
             margin-top: 0.43em;
             margin-left: 0.75em;
             @media (max-width: 600px) {
-                    font-size: 0rem;
-                    visibility: hidden;
+                    display: none;
                 }
         }
         .main{
@@ -333,17 +359,17 @@
                 font-style: normal;
                 font-weight: 500;
                 font-size: 2.083vw;
-                line-height: 1em;
+                line-height: 1.3em;
                 color: #202020;
                 display: flex;
                 flex-direction: column;
                 align-items: left;
                 justify-content: center;
                 @media (max-width: 600px) {
-                        font-size: 0.5rem;
+                        font-size: 0.55rem;
                         align-items: center;
                         text-align: center;
-                        margin-top: -2em;
+                        margin-top: -3em;
                     }
             }
             .user_info{
@@ -358,7 +384,7 @@
                 text-align: center;
                 @media (max-width: 600px) {
                         font-size: 7rem;
-                        margin-top: 0.2em;
+                        margin-top: 0.05em;
                     }
                 .image{
                     font-size: 12.8125vw;
@@ -367,7 +393,7 @@
                     border-radius: 50%;
                     background-color: #015450;
                     @media (max-width: 600px) {
-                        font-size: 7rem;
+                        font-size: 3.5rem;
                     }
                 }
                 .name{
@@ -379,7 +405,7 @@
                     line-height: 0.75em;
                     margin-top: 0.8em;
                     @media (max-width: 600px) {
-                        font-size: 0.8rem;
+                        font-size: 0.6rem;
                     }
                 }
                 .position{
@@ -391,7 +417,7 @@
                     font-size: 1.042vw;
                     line-height: 2em;
                     @media (max-width: 600px) {
-                         font-size: 0.5rem;
+                         font-size: 0.4rem;
                     }
                 }
             }

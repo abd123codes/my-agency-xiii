@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import './sect2.scss';
 import { Footer } from './../../footer/footer';
+import { useWindowDimensions } from 'window-dimensions-hooks';
 
 ////portfolio//
 const worksInfo = [
@@ -52,15 +53,17 @@ const worksElements = worksInfo.map((each) => {
 
 
 export const Sect2 = () => {
-  const [width, setWidth] = useState(0)
+  const [width1, setWidth] = useState(0)
   const row3 = useRef();
-  // const { innerWidth, innerHeight } = window;
+  const { height, width } = useWindowDimensions();
+  console.log(useWindowDimensions());
 
   useEffect(() => {
-    const width =
-      (row3.current.scrollWidth - row3.current.offsetWidth);
-    setWidth(width);
-  }, []);
+    const width2 = row3.current.scrollWidth - row3.current.offsetWidth;
+    setWidth(width2);
+  }, [width, height, row3]);
+
+
 
   return (
     <div className="sect2">
@@ -72,7 +75,7 @@ export const Sect2 = () => {
           </div>
           <div className="info">
             We are UX Design strategists with years of experience and a strong
-            <br /> background
+            <br /> background{" "}
             <span>
               in Digital Transformation, Fintech, Blockchain, Web3, <br />
               Enterprise products
@@ -104,27 +107,29 @@ export const Sect2 = () => {
 
       <div className="row2">
         <div className="fin-tech1">
-          FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION
+          <div>FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION</div>
+          <div>FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION</div>
         </div>
         <div className="fin-tech2">
-          FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION
+          <div>FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION</div>
+          <div>FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION</div>
         </div>
+      </div>
+      <div>
+      <marquee behavior="scroll" direction="left">hello world</marquee>
       </div>
 
       <motion.div className="row3" ref={row3}>
         <motion.div
           drag="x"
-          dragConstraints={{ right: 0, left: -width }}
+          dragConstraints={{ right: 0, left: -width1 }}
           whileTap={{ cursor: "grabbing" }}
         >
           {worksElements}
         </motion.div>
       </motion.div>
 
-      <div className="see_more_work">
-        <span className="text">See more work</span>
-        <span id="right_arrow">&#8594;</span>
-      </div>
+      <div className="see_more_work">See more</div>
 
       <div className="row4">
         <div className="quotation">"</div>

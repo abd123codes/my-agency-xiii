@@ -36,20 +36,30 @@
     top: 0;
     left: 0;
     font-family: "Inter", sans-serif;
-    width: 100%;
-    background-image: url('../../../assets/images/background.png');
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/sidemenu.png');
     background-position: center;
     background-size: cover;
     background-color: #d1d4db;
     background-repeat: no-repeat;
+    @media (max-width:600px){
+      background-position: top;
+      background-size: contain;
+    }
     .background {
-        font-size: max(0.5rem,2.08vw);
-        width: 20%;
-        margin-top: 6.25em;
-        margin-left: 8.2em;
+        font-size: max(0.5rem, 2vw);
+        width: 30%;
+        margin-top: 3.25em;
+        margin-left: 10.2em;
         margin-bottom: 6.25em;
+        @media (max-width:600px) {
+            margin-top: 4.25rem;
+            margin-left: 5.2rem;
+            margin-bottom: 6.25rem;
+          }
       .nav {
-        font-size: max(0.5rem, 2.08vw);
+        font-size: max(0.5rem, 2vw);
         font-weight: 400;
         line-height: 2.6em;
         display: flex;
@@ -60,7 +70,7 @@
       }
 
       .info {
-        font-size: max(0.4rem,1.0416vw);
+        font-size: max(0.4rem,1vw);
         font-weight: 500;
         line-height: 1.4em;
         color: #202020;
@@ -69,19 +79,21 @@
 
       .button {
         font-size: max(0.4rem,0.83vw);
+        width: 17.1875em;
         font-weight: 500;
         line-height: 1.75em;
         text-align: center;
         color: #202020;
         background-color: #ffffff;
-        padding: 1em 6.4375em;
+        padding: 1em 4em;
         margin-top: 1.5em;
         border: 0px;
+        border-radius: 8.125em;
         cursor: pointer;
       }
 
       .socials {
-        font-size: max(0.4rem, 1.0416vw);
+        font-size: max(0.4rem, 1vw);
         font-weight: 300;
         line-height: 1.5em;
         text-align: right;

@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+} from "body-scroll-lock";
 import './hamburger.scss'
 
 export const Hamburger = () => {
@@ -10,9 +14,12 @@ export const Hamburger = () => {
       e.preventDefault();
       if (isActive === false) {
         setIsActive(true);
+        disableBodyScroll(window)
       } else {
         setIsActive(false);
+        enableBodyScroll(window)
       }
+  
   };
   
   return (
