@@ -20,14 +20,13 @@
     .bar1,
     .bar2 {
       width: 100%;
-      height: max(0.15rem,0.2vw);
+      height: max(0.2rem,0.2vw);
       background-color: #212121;
       margin: 0.246em 0;
       transition: 0.4s;
     }
     .bar2 {
       width: 50%;
-      height: max(0.15rem, 0.2vw);
     }
     .change {
         position: absolute;
@@ -37,7 +36,7 @@
         width: 2.5vw;
         transition: 0.05s;
         @media screen and (max-width:600px) {
-          transform: translate(0, 1em) rotate(-45deg);
+          transform: translate(0, 1.5em) rotate(-45deg);
           width: 3vw;
         }
       }
@@ -46,7 +45,7 @@
         width: 2.5vw;
         transition: 0.05s;
         @media screen and (max-width:600px) {
-          transform: translate(0, 0.6em) rotate(45deg);
+          transform: translate(0, 1em) rotate(45deg);
           width: 3vw;
         }
       }
@@ -72,8 +71,6 @@
     @media (max-width:600px){
       background-position: top;
       background-size: contain;
-      width: 100vw;
-      height: 100vh;
     }
     .background {
         font-size: max(1rem, 2vw);
@@ -82,10 +79,9 @@
         margin-left: 10.2em;
         margin-bottom: 6.25em;
         @media (max-width:600px) {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          height: auto;
+            margin-top: 4.25rem;
+            margin-left: 5.2rem;
+            margin-bottom: 6.25rem;
           }
       .nav {
         font-size: max(1rem, 2vw);
@@ -96,9 +92,6 @@
         align-items: left;
         justify-content: space-between;
         width: auto;
-        @media (max-width:600px) {
-            font-size: 1rem;
-          }
       }
 
       .info {
@@ -110,9 +103,6 @@
         white-space: nowrap;
         overflow: visible;
         text-overflow: ellipsis;
-        @media (max-width:600px) {
-            font-size: 0.6rem;
-          }
       }
 
       .button {
@@ -128,15 +118,12 @@
         border: 0px;
         border-radius: 8.125em;
         cursor: pointer;
-        @media (max-width:600px) {
-            font-size: 0.4rem;
-          }
       }
-      .button:hover {
-        background-color: black;
-        color: white;
-        font-weight: 700;
-      }
+            .button:hover {
+              background-color: black;
+              color: white;
+              font-weight: 700;
+            }
 
       .socials {
         font-size: max(0.5rem, 1vw);
@@ -150,9 +137,6 @@
         justify-content: space-between;
         gap: 2.8em;
         margin-top: 5.05em;
-        @media (max-width:600px) {
-            font-size: 0.6rem;
-          }
       }
     }
   }
