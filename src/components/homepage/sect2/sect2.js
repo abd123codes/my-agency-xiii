@@ -1,86 +1,92 @@
 import myrax from "../../../assets/images/myrax.png";
 import miok from "../../../assets/images/miok.png";
 import tripping_cash from "../../../assets/images/tripping_cash.png";
-import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import './sect2.scss';
 import { Footer } from './../../footer/footer';
-import { useWindowDimensions } from 'window-dimensions-hooks';
 
-////portfolio//
-const worksInfo = [
-  {
-    id: 1,
-    src: miok,
-    alt: "miok_landing_page",
-    title: "MIOK Landing Page",
-    info: "Landingpage, UI, web",
-    // id2: false,
-  },
-  {
-    id: 2,
-    src: myrax,
-    alt: "myrax_landing_page",
-    title: "Myrax",
-    info: "UI, UX, Web, Crypto, Web3",
-    // id2: true,
-  },
-  {
-    id: 3,
-    src: tripping_cash,
-    alt: "tripping_cash_landing_page",
-    title: "Tripping Cash",
-    info: "mobile, UX, UI, NFT",
-    // id2: false,
-  },
-];
-const worksElements = worksInfo.map((each) => {
-  return (
-    <div className="work" key={each.id}>
-      <div className="image">
-        <img src={each.src} alt={each.alt} />
-      </div>
-      <div className="desc" >
-        <div>
-          <div className="title">{each.title}</div>
-          <div className="info">{each.info}</div>
-        </div>
-      </div>
-    </div>
-  );
-})
-////portfolio//
 
 
 export const Sect2 = () => {
-  const [width1, setWidth] = useState(0)
-  const row3 = useRef();
-  const { height, width } = useWindowDimensions();
-  console.log(useWindowDimensions());
+  ////portfolio//
+  const worksInfo = [
+    {
+      id: 1,
+      src: miok,
+      alt: "miok_landing_page",
+      title: "MIOK Landing Page",
+      info: "Landingpage, UI, web",
+      // id2: false,
+    },
+    {
+      id: 2,
+      src: myrax,
+      alt: "myrax_landing_page",
+      title: "Myrax",
+      info: "UI, UX, Web, Crypto, Web3",
+      // id2: true,
+    },
+    {
+      id: 3,
+      src: tripping_cash,
+      alt: "tripping_cash_landing_page",
+      title: "Tripping Cash",
+      info: "mobile, UX, UI, NFT",
+      // id2: false,
+    },
+  ];
+  const worksElements = worksInfo.map((each) => {
+    return (
+      <div className="work" key={each.id}>
+        <div className="image">
+          <img src={each.src} alt={each.alt} />
+        </div>
+        <div
+          className="desc"
+          style={{ backgroundColor: each.id === 2 ? `#C9CCD3` : "#e4e5e4" }}
+        >
+          <div>
+            <div className="title">{each.title}</div>
+            <div className="info">{each.info}</div>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  ////portfolio//
 
+  const [width, setWidth] = useState(0);
+  const dragSlider = useRef();
+
+
+  //  const setWindowDimensions = (e) => {
+  //    e.preventDefault();
+     
+  // };
+  
+  // window.addEventListener("resize", setWindowDimensions);
+ 
   useEffect(() => {
-    const width2 = row3.current.scrollWidth - row3.current.offsetWidth;
-    setWidth(width2);
-  }, [width, height, row3]);
-
-
+    setWidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth);
+  }, []);
 
   return (
     <div className="sect2">
       <div className="row1">
         <div className="summary">
           <div className="heading">
-            WE ARE <br />
+            WE ARE
             XIII
           </div>
           <div className="info">
             We are UX Design strategists with years of experience and a strong
-            <br /> background{" "}
+            background{" "}
             <span>
-              in Digital Transformation, Fintech, Blockchain, Web3, <br />
+              in Digital Transformation, Fintech, Blockchain, Web3, 
               Enterprise products
             </span>
-            , working with some of the best teams and clients <br />
+            , working with some of the best teams and clients 
             on some of the leading financial organizations and teams.
           </div>
         </div>
@@ -115,14 +121,12 @@ export const Sect2 = () => {
           <div>FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION</div>
         </div>
       </div>
-      <div>
-      <marquee behavior="scroll" direction="left">hello world</marquee>
-      </div>
 
-      <motion.div className="row3" ref={row3}>
+      <motion.div className="row3" ref={dragSlider}>
         <motion.div
+          ref={dragSlider}
           drag="x"
-          dragConstraints={{ right: 0, left: -width1 }}
+          dragConstraints={{ right: 0, left: -width }}
           whileTap={{ cursor: "grabbing" }}
         >
           {worksElements}

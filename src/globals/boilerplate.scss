@@ -1,23 +1,35 @@
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: url('../assets/images/background.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #d1d4db;
+@font-face {
+  font-family: "sk-modernist";
+  src: url("../assets/fonts/sk-modernist/Sk-Modernist-Bold.otf"),
+    url("../assets/fonts/sk-modernist/Sk-Modernist-Mono.otf"),
+    url("../assets/fonts/sk-modernist/Sk-Modernist-Regular.otf");
 }
 
-@font-face{
-    font-family: 'sk-modernist';
-    src: url('../assets/fonts/sk-modernist/Sk-Modernist-Bold.otf'), url('../assets/fonts/sk-modernist/Sk-Modernist-Mono.otf'),url('../assets/fonts/sk-modernist/Sk-Modernist-Regular.otf')
+@font-face {
+  font-family: "InaiMathi";
+  src: url("../assets/fonts/InaiMathi.ttf");
 }
 
-Link{
+@font-face {
+  font-family: "Kanit";
+  src: url("../assets/fonts/kanit/Kanit-Bold.ttf");
+}
+
+body {
+  background-image: url("../assets/images/background.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #d1d4db;
+  Link {
     text-decoration: none;
+  }
 }
-

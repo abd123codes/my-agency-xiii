@@ -11,7 +11,11 @@
     @media only screen and (max-width: 600px) {
       display: flex;
       flex-direction: column;
-      height: 30rem;
+      align-items: center;
+      justify-content: center;
+      gap: max(45.49px, 12vw);
+      height: max(711.23px, 187.66vw);
+      margin-top: max(43px, 11.34vw);
     }
 
     .xiii {
@@ -23,12 +27,11 @@
       height: auto;
 
       @media only screen and (max-width: 600px) {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        height: auto;
+        justify-content: center;
+        width: max(233px, 61.478vw);
+        height: max(422px, 111.3456vw);
+        gap: max(24px, 6.33vw);
       }
 
       .title {
@@ -45,11 +48,8 @@
         height: 1.636em;
 
         @media only screen and (max-width: 600px) {
-          font-size: 4rem;
-          width: 0.733em;
-          height: 1.636em;
-          rotate: -90deg;
-          z-index: -1;
+          width: max(222px, 58.57vw);
+          height: max(328px, 86.5vw);
         }
       }
 
@@ -65,11 +65,16 @@
         color: #080a16;
 
         @media only screen and (max-width: 600px) {
-          font-size: 0.8rem;
-          text-align: center;
-          // border: 1px solid black;
+          font-family: "InaiMathi";
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-top: 0;
-          margin-bottom: 1.5em;
+          font-size: max(25px, 6.6vw);
+          text-align: center;
+          width: 100%;
+          height: max(90px, 23.75vw);
+          text-overflow: ellipsis;
         }
       }
     }
@@ -99,7 +104,8 @@
     margin-top: 1.7124em;
 
     @media only screen and (max-width: 600px) {
-      font-size: 1.5rem;
+      margin-top: max(70.78px, 18.675vw);
+      height: max(200px, 52.77vw);
     }
   }
 }

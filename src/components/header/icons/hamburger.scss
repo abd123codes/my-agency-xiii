@@ -1,28 +1,54 @@
 .icon {
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+    @media screen and (max-width:600px) {
+      width: max(36px, 1.875vw);
+      height: max(36px, 1.875vw);
+    }
   .hamburger_container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
+    width:  100%;
+    height: 2.7vw;
+    @media screen and (max-width:600px){
+      width: 77.77%;
+      height: 30.56%;
+    }
     .bar1,
     .bar2 {
-      width: max(0.8rem,2vw);
-      height: max(0.08rem,0.2vw);
+      width: 100%;
+      height: max(0.15rem,0.2vw);
       background-color: #212121;
       margin: 0.246em 0;
       transition: 0.4s;
     }
     .bar2 {
-      width: max(0.4rem,1.5vw);
+      width: 50%;
+      height: max(0.15rem, 0.2vw);
     }
     .change {
         position: absolute;
         z-index: 1;
       .bar1 {
-        transform: translate(0, 0.8em) rotate(-45deg);
-        width: 2vw;
+        transform: translate(0, 1.5em) rotate(-45deg);
+        width: 2.5vw;
+        transition: 0.05s;
+        @media screen and (max-width:600px) {
+          transform: translate(0, 1em) rotate(-45deg);
+          width: 3vw;
+        }
       }
       .bar2 {
-        transform: translate(0, 0.5em) rotate(45deg);
-        width: 2vw;
+        transform: translate(0, 1.1em) rotate(45deg);
+        width: 2.5vw;
+        transition: 0.05s;
+        @media screen and (max-width:600px) {
+          transform: translate(0, 0.6em) rotate(45deg);
+          width: 3vw;
+        }
       }
     }
   }
@@ -48,7 +74,7 @@
       background-size: contain;
     }
     .background {
-        font-size: max(0.5rem, 2vw);
+        font-size: max(1rem, 2vw);
         width: 30%;
         margin-top: 3.25em;
         margin-left: 10.2em;
@@ -59,7 +85,7 @@
             margin-bottom: 6.25rem;
           }
       .nav {
-        font-size: max(0.5rem, 2vw);
+        font-size: max(1rem, 2vw);
         font-weight: 400;
         line-height: 2.6em;
         display: flex;
@@ -70,15 +96,18 @@
       }
 
       .info {
-        font-size: max(0.4rem,1vw);
+        font-size: max(0.5rem,1vw);
         font-weight: 500;
         line-height: 1.4em;
         color: #202020;
         margin-top: 5.05em;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: ellipsis;
       }
 
       .button {
-        font-size: max(0.4rem,0.83vw);
+        font-size: max(0.5rem,0.83vw);
         width: 17.1875em;
         font-weight: 500;
         line-height: 1.75em;
@@ -91,9 +120,14 @@
         border-radius: 8.125em;
         cursor: pointer;
       }
+            .button:hover {
+              background-color: black;
+              color: white;
+              font-weight: 700;
+            }
 
       .socials {
-        font-size: max(0.4rem, 1vw);
+        font-size: max(0.5rem, 1vw);
         font-weight: 300;
         line-height: 1.5em;
         text-align: right;

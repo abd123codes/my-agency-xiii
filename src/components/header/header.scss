@@ -1,18 +1,27 @@
-.header{
-    font-size: max(0.8rem,1.3vw);
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.05em;
-    line-height: 0.83em;
-    color: #080A16;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 78.96%;
-    margin: 0 auto;
-    padding-top: 2.12em;
-    .link{
-        font-family: 'sk-modernist';
+.header {
+  font-size: max(0.8rem, 1.3vw);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  line-height: 0.83em;
+  color: #080a16;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 78.96%;
+  margin: 0 auto;
+  padding-top: 2.12em;
+  @media only screen and (max-width: 600px) {
+    width: 86.8vw;
+    padding-top: 10.55vw;
+  }
+  .link {
+    font-family: "sk-modernist";
+    @media only screen and (max-width: 600px) {
+      font-size: 0px;
+      width: 0;
+      height: 0;
     }
+  }
 }
