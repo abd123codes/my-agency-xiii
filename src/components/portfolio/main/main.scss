@@ -1,0 +1,117 @@
+@use "../../../globals/boilerplate.scss" as b;
+@use "../../../globals/functions.scss" as f;
+
+.main {
+  margin-top: max(f.rem(100), 26.666vw);
+  display: flex;
+  flex-direction: column;
+  gap: max(f.rem(50), 13.333vw);
+  width: max(f.rem(327), 87.2vw);
+  margin-inline: auto;
+  margin-bottom: max(f.rem(225), 60.8vw);
+  font-family: "Inter", sans-serif;
+  .one {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+    width: max(f.rem(308), 82.133vw);
+    gap: max(f.rem(2), 0.5333vw);
+    margin-inline: auto;
+    div:first-child {
+      font-size: max(f.rem(20), 5.333vw);
+      font-weight: 700;
+      line-height: 1em;
+    }
+    div:nth-child(2) {
+      white-space: inherit;
+      font-weight: 900;
+      font-size: max(f.rem(35), 9.333vw);
+      line-height: 1.25em;
+    }
+  }
+  .two {
+    display: flex;
+    flex-direction: column;
+    gap: max(f.rem(24), 1.25vw);
+    .filter {
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-between;
+      width: max(f.rem(292), 15.208vw);
+      line-height: max(f.rem(20), 1.0416vw);
+    }
+    .port {
+      display: inherit;
+      flex-direction: inherit;
+      gap: max(f.rem(40), 10.666vw);
+      .portfolio-list {
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .cont {
+          background-color: #e4e5e4;
+          display: inherit;
+          flex-direction: inherit;
+          justify-content: center;
+          .title {
+            margin-top: 1.11875em;
+            margin-left: 1.34em;
+            width: max(f.rem(162), 43.2vw);
+            font-weight: 600;
+            font-size: max(f.rem(17.9), 4.7773vw);
+            line-height: 1.111em;
+            margin-bottom: 0.22346em;
+          }
+          .desc {
+            display: flex;
+            word-break: break-all;
+            margin-bottom: 1.1423em;
+            margin-left: 1.714em;
+            width: max(f.rem(162), 43.2vw);
+            font-size: max(f.rem(14), 3.7333vw);
+            font-weight: 400;
+            line-height: 1.1428em;
+          }
+        }
+      }
+    }
+  }
+  .three {
+    margin-top: max(f.rem(50), 13.333vw);
+    display: flex;
+    flex-direction: column;
+    gap: max(f.rem(32), 8.533vw);
+    .ready {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: max(f.rem(39), 10.4vw);
+      line-height: 1.25em;
+    }
+    .tell {
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: max(f.rem(20), 5.333vw);
+      width: max(f.rem(176), 46.93vw);
+      margin-inline: auto;
+      line-height: 1em;
+      border-radius: 10em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    .tell:hover {
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+  }
+}

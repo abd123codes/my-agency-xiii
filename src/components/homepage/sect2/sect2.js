@@ -5,6 +5,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import './sect2.scss';
 import { Footer } from './../../footer/footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -75,19 +76,16 @@ export const Sect2 = () => {
     <div className="sect2">
       <div className="row1">
         <div className="summary">
-          <div className="heading">
-            WE ARE
-            XIII
-          </div>
+          <div className="heading">WE ARE XIII</div>
           <div className="info">
             We are UX Design strategists with years of experience and a strong
             background{" "}
             <span>
-              in Digital Transformation, Fintech, Blockchain, Web3, 
-              Enterprise products
+              in Digital Transformation, Fintech, Blockchain, Web3, Enterprise
+              products
             </span>
-            , working with some of the best teams and clients 
-            on some of the leading financial organizations and teams.
+            , working with some of the best teams and clients on some of the
+            leading financial organizations and teams.
           </div>
         </div>
         <div className="stats">
@@ -133,7 +131,9 @@ export const Sect2 = () => {
         </motion.div>
       </motion.div>
 
-      <div className="see_more_work">See more</div>
+      <Link style={{ textDecoration: "none" }} to="/portfolio">
+        <div className="see_more_work">See more</div>
+      </Link>
 
       <div className="row4">
         <div className="quotation">"</div>

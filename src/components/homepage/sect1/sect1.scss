@@ -1,4 +1,8 @@
 .sect1 {
+  background-image: url("../../../assets/images/background.png");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
   .row1 {
     font-size: max(1rem, 15.625vw);
     margin: 0 auto;

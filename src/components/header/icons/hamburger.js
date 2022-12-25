@@ -1,27 +1,28 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-} from "body-scroll-lock";
-import './hamburger.scss'
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import "./hamburger.scss";
 
 export const Hamburger = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    enableBodyScroll(window);
+  }, [location.pathname]);
 
   const [isActive, setIsActive] = useState(false);
-  
-    const myFunction = (e) => {
-      e.preventDefault();
-      if (isActive === false) {
-        setIsActive(true);
-        disableBodyScroll(window)
-      } else {
-        setIsActive(false);
-        enableBodyScroll(window)
-      }
-  
+
+  const myFunction = (e) => {
+    e.preventDefault();
+    if (isActive === false) {
+      setIsActive(true);
+      disableBodyScroll(window);
+    } else {
+      setIsActive(false);
+      enableBodyScroll(window);
+    }
   };
-  
+
   return (
     <div className="icon">
       <div className="hamburger_container" onClick={myFunction}>
@@ -39,23 +40,27 @@ export const Hamburger = () => {
                   textDecoration: "none",
                   color: "#015450",
                   fontWeight: "700",
-                }} to='/'
+                }}
+                to="/"
               >
                 HOME
               </Link>
             </div>
             <div>
-              <Link style={{ textDecoration: "none", color: "#015450" }} to='/'>
+              <Link
+                style={{ textDecoration: "none", color: "#015450" }}
+                to="/portfolio"
+              >
                 PROJECTS
               </Link>
             </div>
             <div>
-              <Link style={{ textDecoration: "none", color: "#015450" }} to='/'>
+              <Link style={{ textDecoration: "none", color: "#015450" }} to="/">
                 SERVICES
               </Link>
             </div>
             <div>
-              <Link style={{ textDecoration: "none", color: "#015450" }} to='/'>
+              <Link style={{ textDecoration: "none", color: "#015450" }} to="/">
                 Contact us
               </Link>
             </div>

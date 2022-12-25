@@ -12,10 +12,13 @@ export const Footer = () => {
             <div>UX Designers and strategist architect</div>
             <div>info@xiii.com</div>
           </div>
-          <div className="socials">
-            <div>Instagram</div>
-            <div>Dribble</div>
-            <div>Twitter</div>
+          <div className="socials-container">
+         
+              <span className="socials">Instagram</span>
+          
+              <span className="socials">Dribble</span>
+            
+              <span className="socials">Twitter</span>
           </div>
         </div>
       </div>

@@ -392,11 +392,10 @@
       font-size: max(2.5rem, 10.55vw);
       width: 6em;
       height: 4em;
+      gap: 0;
     }
 
     .quotation {
-      width: 0.45em;
-      height: 0.455em;
       font-style: normal;
       font-weight: 900;
       font-size: 10.4167vw;
@@ -404,13 +403,15 @@
       color: rgba(32, 32, 32, 0.2);
       margin-top: 0.43em;
       margin-left: 0.75em;
-
+      font-family: 'Inter', sans-serif;
       @media (max-width: 600px) {
+        font-size: 0px;
         display: none;
       }
     }
 
     .main {
+      margin-top: 0;
       display: flex;
       flex-direction: row;
       align-items: left;
@@ -421,7 +422,6 @@
       margin-right: 0.1345em;
       margin-left: 0.124em;
       width: 1em;
-
       @media (max-width: 600px) {
         font-size: max(10rem, 42.2vw);
         flex-direction: column-reverse;

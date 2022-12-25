@@ -1,0 +1,11 @@
+.portfolio{
+    background-color: white;
+    background-image: url(../../assets/images/background.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: max(375px, 100%);
+    display: flex;
+    flex-direction: column;
+    
+}
