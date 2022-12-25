@@ -134,10 +134,11 @@ export const Main = () => {
       </div>
       <div className="two">
         <div className="filter">
-          <div className="green">All</div>
-          <div>Mobile</div>
-          <div>Web</div>
-          <div>Branding</div>
+          <div className="disappear cursor">Filter by:</div>
+          <div className="green cursor">All</div>
+          <div className="cursor">Mobile</div>
+          <div className="cursor">Web</div>
+          <div className="cursor">Branding</div>
         </div>
         <div className="port">{portfolioList}</div>
       </div>

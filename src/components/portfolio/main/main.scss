@@ -1,6 +1,17 @@
 @use "../../../globals/boilerplate.scss" as b;
 @use "../../../globals/functions.scss" as f;
 
+.disappear {
+    display: none;
+    @include b.breakpoint-min (desktop) {
+        display: initial;
+    }
+}
+
+.cursor:hover{
+    cursor: pointer;
+}
+
 .main {
   margin-top: max(f.rem(100), 26.666vw);
   display: flex;
@@ -10,6 +21,12 @@
   margin-inline: auto;
   margin-bottom: max(f.rem(225), 60.8vw);
   font-family: "Inter", sans-serif;
+  @include b.breakpoint-min (desktop){
+    margin-top: 8.23vw;
+    width: 79.166vw;
+    gap: 0;
+    margin-bottom: 14.114vw;
+  }
   .one {
     display: inherit;
     flex-direction: inherit;
@@ -17,36 +34,66 @@
     width: max(f.rem(308), 82.133vw);
     gap: max(f.rem(2), 0.5333vw);
     margin-inline: auto;
+    @include b.breakpoint-min (desktop) {
+        gap: 0.625vw;
+    }
     div:first-child {
       font-size: max(f.rem(20), 5.333vw);
       font-weight: 700;
       line-height: 1em;
+      @include b.breakpoint-min (desktop) {
+        font-size: 1.5625vw;
+      }
     }
     div:nth-child(2) {
       white-space: inherit;
       font-weight: 900;
       font-size: max(f.rem(35), 9.333vw);
       line-height: 1.25em;
+      @include b.breakpoint-min (desktop) {
+        font-size: 9.375vw;
+        line-height: 1em;
+        color: #FFFFFF;
+       }
     }
   }
   .two {
     display: flex;
     flex-direction: column;
     gap: max(f.rem(24), 1.25vw);
+    @include b.breakpoint-min (desktop) {
+        margin-top: 13.02vw;
+        gap: 5.208vw;
+    }
     .filter {
       display: inherit;
       flex-direction: row;
       justify-content: space-between;
       width: max(f.rem(292), 15.208vw);
       line-height: max(f.rem(20), 1.0416vw);
+      @include b.breakpoint-min (desktop) {
+        width: 31.875vw;
+        font-size: 1.5625vw;
+      }
     }
     .port {
       display: inherit;
       flex-direction: inherit;
       gap: max(f.rem(40), 10.666vw);
+        @include b.breakpoint-min (desktop) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            justify-content: space-between;
+            row-gap: 4.1666vw;
+        }
       .portfolio-list {
         display: flex;
         flex-direction: column;
+        @include b.breakpoint-min (desktop) {
+            width: 38.54vw;
+            height: 31.354vw;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -64,6 +111,10 @@
             font-size: max(f.rem(17.9), 4.7773vw);
             line-height: 1.111em;
             margin-bottom: 0.22346em;
+            @include b.breakpoint-min (desktop) {
+                font-size: 1.25vw;
+                line-height: 1em;
+            }
           }
           .desc {
             display: flex;
@@ -74,6 +125,10 @@
             font-size: max(f.rem(14), 3.7333vw);
             font-weight: 400;
             line-height: 1.1428em;
+            @include b.breakpoint-min (desktop) {
+                font-size: 0.9375vw;
+                line-height: 1.11em;
+            }
           }
         }
       }
@@ -84,14 +139,26 @@
     display: flex;
     flex-direction: column;
     gap: max(f.rem(32), 8.533vw);
+    @include b.breakpoint-min (desktop) {
+        margin-top: 10.416vw;
+        width: 45.05vw;
+        margin-inline: auto;
+        gap: 5.208vw;
+    }
     .ready {
-      width: 100%;
+      width: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
       font-size: max(f.rem(39), 10.4vw);
       line-height: 1.25em;
+      text-align: center;
+    @include b.breakpoint-min (desktop) {
+            font-size: 5.208vw;
+            font-weight: 500;
+            line-height: 1em;
+        }
     }
     .tell {
       border: 1px solid black;
@@ -107,6 +174,14 @@
       padding-bottom: 1em;
       padding-left: 1.5em;
       padding-right: 1.5em;
+    @include b.breakpoint-min (desktop) {
+            font-size: 1.5625vw;
+            line-height: 1.0714em;
+            width: 15.625vw;
+            padding: 0;
+            line-height: 3.645vw;
+            border-radius: 6.7708vw;
+        }
     }
     .tell:hover {
       cursor: pointer;
