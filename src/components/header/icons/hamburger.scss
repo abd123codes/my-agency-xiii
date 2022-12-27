@@ -61,7 +61,7 @@
     top: 0;
     left: 0;
     font-family: "Inter", sans-serif;
-    width: 100vw;
+    width: max(375px, 100%);
     height: 100vh;
     background-image: url('../../../assets/images/sidemenu.png');
     background-position: center;

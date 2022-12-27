@@ -11,13 +11,15 @@ import ninth from "../assets-portfolio/Frame 41708.png";
 import tenth from "../assets-portfolio/Frame 41709.png";
 import eleventh from "../assets-portfolio/Frame 41710.png";
 import twelfth from "../assets-portfolio/Frame 41711.png";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const Main = () => {
   const data = [
     {
       id: 1,
       img: first,
-      type: "all",
+      type: "web",
       alt: "Web Landing Page",
       title: "Web Landing Page",
       desc: "Description",
@@ -25,7 +27,7 @@ export const Main = () => {
     {
       id: 2,
       img: second,
-      type: "all",
+      type: "mobile",
       alt: "CryptoLite",
       title: "CryptoLite",
       desc: "Description",
@@ -33,7 +35,7 @@ export const Main = () => {
     {
       id: 3,
       img: third,
-      type: "all",
+      type: "web",
       alt: "Myrax",
       title: "Myrax",
       desc: "Description",
@@ -41,7 +43,7 @@ export const Main = () => {
     {
       id: 4,
       img: fourth,
-      type: "all",
+      type: "mobile",
       alt: "SweetHome",
       title: "SweetHome",
       desc: "Description",
@@ -49,7 +51,7 @@ export const Main = () => {
     {
       id: 5,
       img: fifth,
-      type: "all",
+      type: "mobile",
       alt: "Tripping Cash",
       title: "Tripping Cash",
       desc: "Description",
@@ -57,15 +59,15 @@ export const Main = () => {
     {
       id: 6,
       img: sixth,
-      type: "all",
+      type: "mobile",
       alt: "SweetHome",
-      title: "SweetHome",
+      title: "uBook",
       desc: "Description",
     },
     {
       id: 7,
       img: seventh,
-      type: "all",
+      type: "mobile",
       alt: "Trim Banking",
       title: "Trim Banking",
       desc: "Description",
@@ -73,7 +75,7 @@ export const Main = () => {
     {
       id: 8,
       img: eight,
-      type: "all",
+      type: "mobile",
       alt: "SafeX",
       title: "SafeX",
       desc: "Description",
@@ -81,7 +83,7 @@ export const Main = () => {
     {
       id: 9,
       img: ninth,
-      type: "all",
+      type: "mobile",
       alt: "Sparrow",
       title: "Sparrow",
       desc: "Description",
@@ -89,7 +91,7 @@ export const Main = () => {
     {
       id: 10,
       img: tenth,
-      type: "all",
+      type: "mobile",
       alt: "KnowledgeX",
       title: "KnowledgeX",
       desc: "Description",
@@ -97,7 +99,7 @@ export const Main = () => {
     {
       id: 11,
       img: eleventh,
-      type: "all",
+      type: "web",
       alt: "Diamond",
       title: "Diamond",
       desc: "Description",
@@ -105,26 +107,91 @@ export const Main = () => {
     {
       id: 12,
       img: twelfth,
-      type: "all",
+      type: "web",
       alt: "Starshop",
       title: "Starshop",
       desc: "Description",
     },
   ];
 
-  const portfolioList = data.map(
-    (portfolio) => {
-        return (
-          <div className="portfolio-list" key={portfolio.id}>
-            <img src={portfolio.img} alt={portfolio.alt} />
-            <div className="cont">
-              <div className="title">{portfolio.title}</div>
-              <div className="desc">{portfolio.desc}</div>
-            </div>
-          </div>
-        );
+  const portfolioList = data.map((portfolio) => {
+    return (
+      <div className="portfolio-list" key={portfolio.id}>
+        <img src={portfolio.img} alt={portfolio.alt} />
+        <div className="cont">
+          <div className="title">{portfolio.title}</div>
+          <div className="desc">{portfolio.desc}</div>
+        </div>
+      </div>
+    );
+  });
+
+  const [state, setState] = useState(portfolioList);
+  const [all, setAllState] = useState('');
+  const [phone, setPhoneState] = useState('');
+  const [website, setWebState] = useState('');
+  const [branding, setBrandState] = useState('');
+
+  useEffect(() => {
+    setState(portfolioList);
+    setAllState('green')
+  }, []);
+
+  const web = data.filter((portfolio) => portfolio.type === "web");
+  const mobile = data.filter((portfolio) => portfolio.type === "mobile");
+
+  const webList = web.map((portfolio) => {
+    return (
+      <div className="portfolio-list" key={portfolio.id}>
+        <img src={portfolio.img} alt={portfolio.alt} />
+        <div className="cont">
+          <div className="title">{portfolio.title}</div>
+          <div className="desc">{portfolio.desc}</div>
+        </div>
+      </div>
+    );
+  });
+  const mobileList = mobile.map((portfolio) => {
+    return (
+      <div className="portfolio-list" key={portfolio.id}>
+        <img src={portfolio.img} alt={portfolio.alt} />
+        <div className="cont">
+          <div className="title">{portfolio.title}</div>
+          <div className="desc">{portfolio.desc}</div>
+        </div>
+      </div>
+    );
+  });
+
+  const portfolioSorter = (e) => {
+    e.preventDefault();
+    if (e.target.innerText === "Web") {
+      setState(webList);
+      setWebState("green");
+      setAllState("");
+      setPhoneState("");
+      setBrandState("");
+      
+    } else if (e.target.innerText === "Mobile") {
+      setState(mobileList);
+      setWebState("");
+      setAllState("");
+      setPhoneState("green");
+      setBrandState("");
+    } else if (e.target.innerText === "All") {
+      setState(portfolioList);
+      setWebState("");
+      setAllState("green");
+      setPhoneState("");
+      setBrandState("");
+    } else if (e.target.innerText === "Branding") {
+      setState(portfolioList);
+      setWebState("");
+      setAllState("");
+      setPhoneState("");
+      setBrandState("green");
     }
-  )
+  };
 
   return (
     <main className="main">
@@ -135,12 +202,20 @@ export const Main = () => {
       <div className="two">
         <div className="filter">
           <div className="disappear cursor">Filter by:</div>
-          <div className="green cursor">All</div>
-          <div className="cursor">Mobile</div>
-          <div className="cursor">Web</div>
-          <div className="cursor">Branding</div>
+          <div className={`cursor ${all}`} onClick={portfolioSorter}>
+            All
+          </div>
+          <div className={`cursor ${phone}`} onClick={portfolioSorter}>
+            Mobile
+          </div>
+          <div className={`cursor ${website}`} onClick={portfolioSorter}>
+            Web
+          </div>
+          <div className={`cursor ${branding}`} onClick={portfolioSorter}>
+            Branding
+          </div>
         </div>
-        <div className="port">{portfolioList}</div>
+        <div className="port">{state}</div>
       </div>
       <div className="three">
         <div className="ready">Ready for your next project...?</div>
