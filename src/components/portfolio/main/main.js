@@ -211,9 +211,9 @@ export const Main = () => {
           <div className={`cursor ${website}`} onClick={portfolioSorter}>
             Web
           </div>
-          <div className={`cursor ${branding}`} onClick={portfolioSorter}>
+          {/*<div className={`cursor ${branding}`} onClick={portfolioSorter}>
             Branding
-          </div>
+  </div>*/}
         </div>
         <div className="port">{state}</div>
       </div>
