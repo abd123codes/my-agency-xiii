@@ -13,6 +13,7 @@ import eleventh from "../assets-portfolio/Frame 41710.png";
 import twelfth from "../assets-portfolio/Frame 41711.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 export const Main = () => {
   const data = [
@@ -134,7 +135,7 @@ export const Main = () => {
 
   useEffect(() => {
     setState(portfolioList);
-    setAllState('green')
+    setAllState("green");
   }, []);
 
   const web = data.filter((portfolio) => portfolio.type === "web");
@@ -219,7 +220,9 @@ export const Main = () => {
       </div>
       <div className="three">
         <div className="ready">Ready for your next project...?</div>
-        <div className="tell">Tell us more</div>
+        <Link to="/contact" style={{ color: 'black' }}>
+          <div className="tell">Tell us more</div>
+        </Link>
       </div>
     </main>
   );

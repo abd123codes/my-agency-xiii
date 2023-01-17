@@ -60,7 +60,7 @@ export const Hamburger = () => {
               </Link>
             </div>
             <div>
-              <Link style={{ textDecoration: "none", color: "#015450" }} to="/">
+              <Link style={{ textDecoration: "none", color: "#015450" }} to="/contact">
                 Contact us
               </Link>
             </div>
