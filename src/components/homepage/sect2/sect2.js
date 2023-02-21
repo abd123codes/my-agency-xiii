@@ -4,7 +4,6 @@ import tripping_cash from "../../../assets/images/tripping_cash.png";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import './sect2.scss';
-import { Footer } from './../../footer/footer';
 import { Link } from 'react-router-dom';
 
 
@@ -150,7 +149,6 @@ export const Sect2 = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

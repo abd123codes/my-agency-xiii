@@ -13,12 +13,9 @@ export const Footer = () => {
             <div>info@xiii.com</div>
           </div>
           <div className="socials-container">
-         
-              <span className="socials">Instagram</span>
-          
-              <span className="socials">Dribble</span>
-            
-              <span className="socials">Twitter</span>
+            <span className="socials">Instagram</span>
+            <span className="socials">Dribble</span>
+            <span className="socials">Twitter</span>
           </div>
         </div>
       </div>

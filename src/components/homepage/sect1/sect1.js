@@ -1,11 +1,9 @@
 
 import "./sect1.scss";
-import { Header } from './../../header/header';
 
 export const Sect1 = () => {
   return (
     <div className="sect1">
-      <Header />
       <div className="row1">
         <div className="xiii">
           <div className="title"></div>

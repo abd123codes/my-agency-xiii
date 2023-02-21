@@ -37,9 +37,9 @@
     @include b.breakpoint-min(desktop) {
       position: absolute;
       bottom: 0;
-      color: white;
-      width: 100%;
+      color: #ffffff;
       height: 41.66vw;
+      width: 100vw;
     }
     .info {
       display: flex;
