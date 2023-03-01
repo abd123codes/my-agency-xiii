@@ -9,7 +9,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "footer-img": "url('/src/components/footer/assets/footer_img.png')",
+      //background images
+        "main-bg-img":"url('/src/assets/images/background.png')",
+        "footer-img":"url('/src/components/footer/assets/footer_img.png')",
+        "side-menu-img":"url('/src/components/header/assets/sidemenu.png')",
+
+        //content images
         "contact-img":'url("/src/components/contact/assets/Frame41711.png")'
       },
     },

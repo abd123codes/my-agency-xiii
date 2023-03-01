@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="w-[max(23.4375em,100%)] font-[Inter]">
-      <div className="text-[0] font-black tablet:overflow-hidden tablet:whitespace-nowrap leading-[1em] relative top-[0.35em] left-[-1.51em] w-[115.73vw] tablet:text-[10.42vw] text-stroke">
+      <div className="text-[0] font-black tablet:overflow-hidden tablet:whitespace-nowrap leading-[1em] relative top-[0.35em] left-[-1.51em] w-[10.9em] tablet:text-[10.42vw] text-stroke">
         FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION
       </div>
       <div className="relative z-10">
