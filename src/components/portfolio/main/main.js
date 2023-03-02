@@ -1,4 +1,3 @@
-import "./main.scss";
 import first from "../assets/Frame 41700.png";
 import second from "../assets/Frame 41701.png";
 import third from "../assets/Frame 41702.png";

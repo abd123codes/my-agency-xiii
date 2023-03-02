@@ -18,9 +18,9 @@ export const Header = () => {
 
   return (
     <header className={`${state2}`}>
-      <div className="w-[max(327px,87.2vw)] tablet:w-[79.2vw] flex flex-row items-center justify-between mx-auto pt-[max(40px,10.67vw)] tablet:pt-[2.60vw] h-[max(36px,9.6vw)] tablet:h-[1.875vw] font-[Inter]">
+      <div className="w-[max(327px,87.2vw)] tablet:w-[79.2vw] flex flex-row items-center justify-between mx-auto pt-[max(40px,10.67vw)] tablet:pt-[2.60vw] font-[Inter]">
         <div
-          className="flex flex-col tablet:w-[max(28px,2.46vw)] h-[max(36px,9.6vw)] w-[max(36px,9.6vw)] tablet:h-[max(11px,1.875vw)] gap-[max(5px,0.04vw)] tablet:gap-0 tablet:justify-evenly hover:cursor-pointer"
+          className="flex flex-col tablet:w-[max(28px,2.46vw)] h-[max(36px,9.6vw)]  w-[max(36px,9.6vw)] tablet:h-[max(11px,1.875vw)] gap-[max(5px,0.04vw)] tablet:gap-0 tablet:justify-evenly hover:cursor-pointer"
           onClick={sideMenuHandler}
         >
           <div className="bg-[#212121] w-[77.7%] tablet:w-[100%] h-[max(3px,0.8vw)] ml-[max(4px,1.06vw)] tablet:h-[0.28vw] tablet:ml-0"></div>
@@ -33,7 +33,7 @@ export const Header = () => {
 
       {/*SIDE MENU*/}
       <nav
-        className={`${state} bg-side-menu-img bg-cover bg-[color:#D1D4DB] bg-fixed bg-no-repeat h-[100vh] w-[100vw]`}
+        className={`${state} bg-side-menu-img bg-contain bg-[color:#D1D4DB] bg-fixed bg-no-repeat h-[100vh] w-[100vw]`}
       >
         <input
           type="button"
@@ -43,14 +43,26 @@ export const Header = () => {
         />
         <div className="w-[18.28%] flex flex-col gap-[5.26vw] border">
           <div className="flex flex-col gap-[2.6vw] font-[Inter] text-[#015450] text-[2.08vw] font-[400] leading-[1.25em]">
-            <div>Home</div>
-            <div>Projects</div>
-            <div>Services</div>
-            <div>Contact us</div>
+            <div>
+              <Link to="/">Home</Link>
+            </div>
+            <div>
+              <Link to="/portfolio">Projects</Link>
+            </div>
+            <div>
+              {" "}
+              <Link to="/">Services</Link>
+            </div>
+            <div>
+              <Link to="/contact">Contact us</Link>
+            </div>
           </div>
           <div>
             <div>Let's talk about your next project</div>
-            <div>Let's Talk</div>
+            <div>
+              {" "}
+              <Link to='/contact'>Let's Talk</Link>
+            </div>
           </div>
           <div className="flex flex-row items-start justify-between">
             <div>Instagram</div>
