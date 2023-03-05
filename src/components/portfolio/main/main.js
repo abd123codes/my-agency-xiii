@@ -127,14 +127,16 @@ export const Main = () => {
   });
 
   const [state, setState] = useState(portfolioList);
-  const [all, setAllState] = useState('');
-  const [phone, setPhoneState] = useState('');
-  const [website, setWebState] = useState('');
-  const [branding, setBrandState] = useState('');
+  const [all, setAllState] = useState("");
+  const [phone, setPhoneState] = useState("");
+  const [website, setWebState] = useState("");
+  // eslint-disable-next-line
+  const [branding, setBrandState] = useState("");
 
   useEffect(() => {
     setState(portfolioList);
     setAllState("green");
+    // eslint-disable-next-line
   }, []);
 
   const web = data.filter((portfolio) => portfolio.type === "web");
@@ -171,7 +173,6 @@ export const Main = () => {
       setAllState("");
       setPhoneState("");
       setBrandState("");
-      
     } else if (e.target.innerText === "Mobile") {
       setState(mobileList);
       setWebState("");
@@ -219,7 +220,7 @@ export const Main = () => {
       </div>
       <div className="three">
         <div className="ready">Ready for your next project...?</div>
-        <Link to="/contact" style={{ color: 'black' }}>
+        <Link to="/contact" style={{ color: "black" }}>
           <div className="tell">Tell us more</div>
         </Link>
       </div>
