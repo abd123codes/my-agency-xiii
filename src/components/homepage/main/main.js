@@ -1,8 +1,8 @@
+import Carousel from "./../carousel/carousel";
 
 export const Main = () => {
   return (
-    <main className="border w-[max(375px,100%)]">
-
+    <main className="w-[max(375px,100%)] border">
       {/** intro */}
       <div className="mt-[max(43px,11.47vw)] flex flex-col items-center gap-[max(24px,6.4vw)] w-[max(223px,62.13vw)] mx-auto">
         <div className="bg-XIII-img bg-center bg-no-repeat bg-contain w-[98.65%] h-[max(328px,87.47vw)]"></div>
@@ -64,16 +64,41 @@ export const Main = () => {
 
       {/** animation */}
       <div className="mt-[max(100px,26.67vw)] font-[Inter] overflow-hidden whitespace-nowrap">
-        <div className="text-stroke font-black text-[max(65px,17.33vw)] leading-[1em] relative left-[100%] animate-slide-left">
+        <div className="text-stroke font-black text-[max(80px,21.33vw)] leading-[1em] relative left-[100%] animate-slide-left">
           FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION
         </div>
-        <div className="font-black text-[max(65px,17.33vw)] leading-[1em] relative animate-slide-right">
+        <div className="font-black text-[max(80px,21.33vw)] leading-[1em] relative animate-slide-right">
           FINTECH BLOCKCHAIN WEB3 DIGITAL TRANSFORMATION
         </div>
       </div>
 
       {/** carousel */}
+      <Carousel />
 
+      {/** comment */}
+      <div className="w-[79.2vw] bg-[#E4E5E4] mx-auto mt-[9.95vw] mb-[max(13.3vw,3.1em)] border">
+        <div className="text-[8.416vw] w-[80%] font-[900] text-[#20202033] mt-[4.5vw] mx-auto h-[1em]">
+          “
+        </div>
+        <div className="w-[80%] mx-auto flex flex-row justify-between border mb-[9.22vw]">
+          <div className="my-[0.45em] text-[2.083vw] leading-[1.75em] text-[500] w-[80.67%] ">
+            I realized I had found something that was missing from every other
+            school that I’d looked at — I loved how passionate everybody was
+            about XIII agency.
+          </div>
+          <div className="w-[12.42%] flex flex-col gap-[1.25vw] items-center justify-center">
+            <div className="w-[100%] h-[7.03vw] rounded-full border border-[black]"></div>
+            <div className="flex flex-col gap-[0.417vw]">
+              <div className="text-[1.5625vw] leading-[1.33vw] font-[500]">
+                Sarah Lein
+              </div>
+              <div className="text-[1.042vw] leading-[2vw] font-[500] text-center">
+                Infinix CEO
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
